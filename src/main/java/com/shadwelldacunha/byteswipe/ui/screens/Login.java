@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) year Shadwell Da Cunha
+ * Copyright (c) 2016 Shadwell Da Cunha
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -36,4 +36,7 @@ import javax.swing.*;
  * @since 1.0.0
  */
 public class Login extends Screen {
+    public Login() {
+
+    }
 }
