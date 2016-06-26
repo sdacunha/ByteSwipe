@@ -4,7 +4,7 @@ jdk:
 before_install:
 - chmod +x gradlew
 before_deploy:
-- ./gradlew assemble
+- ./gradlew build
 - mv build/libs/ByteSwipe.jar build/libs/ByteSwipe-$TRAVIS_TAG.jar
 deploy:
   provider: releases
