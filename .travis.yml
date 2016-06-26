@@ -1,13 +1,12 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 before_install:
-  - chmod +x gradlew
+- chmod +x gradlew
 deploy:
   provider: releases
   api_key:
-    secure: "lrAo6i8xd+5A3iSxtKN4AIavqDIU8BCMVifG5Ml+anlJesqe4jYU/lbLHqGoG2erWw4QZV8eHIsL4cXU23h9CxR6H1dqubEv6D0wGSXm/OwcXCuEv4ulgiuv9Lgvj9ILlh/Sfq7ufLweIbP1vj3Q4IFMDHEiJV2R3Rk31CraJwl1WcmZ7qiKPyREZWItHJp8dDfDoKWWaSoYL26sT//jRYJDW0CVvksWcaF3aoXlbkxBJyzNMn14gd0ngBagkdmy2/+u0KEPQUBF76veNu+7wvgRg938FDeLjxwP2skokczagAR3xKrHrJRDQCqevoHL5cxKzsyJQsrFMRe+iPb4HC/+eImR1+raDnmwIFpdr1FMNdZKB00t6eqxwdyK2+G1+cpFX76xdde4grHbp7cl9hmbh3a/+6+8BctkfkZe8gM+hNgLYl0WA+Lsi7MGwBx/irWUr778f1U7I3ouXeOLAcBcsfFXdm5JqDKSvOqaAGkzylVrLWXtQ1i8ugkF7IMyqNLeBFdjdq3kTvycr51iO3XvHN4uRBQrxa1fcuXOsAXKizuSWkzpdXU+swt9I3QFX1lAHwa83NiY6EYBCa62/YXdtcsABKbD7F4X8Hm7/CD8pnlgLMKPpe7TNfhb167JBd4xxkYY3dbScR+JGe2H31dtrCTnZrHeaNU8Od9tvlY="
-  file: ${TRAVIS_BUILD_DIR}/build/libs/ByteSwipe.jar
-  skip_cleanup: true
+    secure: bd9P4J1/kClbL/j5PKySNM0+PVaFcYI2li61wYNnpD/uBDswXjF0QOkB8EL4GcMQoUusOCnaIqL/QPUy+Sg/KX+vvxCB9iCuUIf5sohy2i34pb26ucGzhs4oTh27Zvsw67ZCjiKmRD1kuPyHaoWYoP5Is9P+qE68retRrIzV1uiCQoBIdRvuljTPIzCxheMhl6jMpJF99l9t8GRQSOzX/AnK3ah9nXFlHdRF/fCYowp1a8ltS1F2g5Oo762h44sm+689JFpqiCD2JpIofwfvpJdHUAxTGdcXtRZf84Fkd7CdxLfv6PDIkpl1J1t+ac0+/37+n71CblbcJ82fUtF6CiJ2P6nZJfw4WpLdXHnx+pJAPG1LVeA+DMrh6IVU7ridhNBjYlPQhHLxjafj+B8j0EiRD/6IzxrUmQC67yPyQGJQvQbQmuKKNSVcAvleByz7ULbfSVZdJmvXkVangPeaeqBgQc2YGi38x+kyzziQg1+Z889UNoIJePrYh+SmlEZdJiMsUdHVBiEHSP6c1yKwjW/w6uS5BLBLNVeBbV5xhjhysqUpxpRn1if9VEvU6ORwe/1nd6tIWqc26v4lE0myUbcfpkrcu+86C3V4fH+c0Zm3AII45vT6NebY1g7Ai2kjX6gYNTfUx6q8hD8J7u8vL07ZE5Jj7MgwYNp03Kz/tEg=
+  file: "build/libs/ByteSwipe-*.jar"
   on:
     repo: shadwelldacunha/ByteSwipe
