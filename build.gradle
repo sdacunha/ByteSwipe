@@ -49,7 +49,7 @@ repositories {
 shadowJar {
     baseName = project.name
     classifier = null
-    version = project.version
+    version = null
     manifest {
         attributes 'Main-Class': 'ByteSwipe'
     }
