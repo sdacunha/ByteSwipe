@@ -8,7 +8,6 @@ before_deploy:
 - mv build/libs/ByteSwipe.jar build/libs/ByteSwipe-${TRAVIS_COMMIT}.jar
 deploy:
   provider: releases
-  prerelease: true
   skip_cleanup: true
   api_key:
     secure: bd9P4J1/kClbL/j5PKySNM0+PVaFcYI2li61wYNnpD/uBDswXjF0QOkB8EL4GcMQoUusOCnaIqL/QPUy+Sg/KX+vvxCB9iCuUIf5sohy2i34pb26ucGzhs4oTh27Zvsw67ZCjiKmRD1kuPyHaoWYoP5Is9P+qE68retRrIzV1uiCQoBIdRvuljTPIzCxheMhl6jMpJF99l9t8GRQSOzX/AnK3ah9nXFlHdRF/fCYowp1a8ltS1F2g5Oo762h44sm+689JFpqiCD2JpIofwfvpJdHUAxTGdcXtRZf84Fkd7CdxLfv6PDIkpl1J1t+ac0+/37+n71CblbcJ82fUtF6CiJ2P6nZJfw4WpLdXHnx+pJAPG1LVeA+DMrh6IVU7ridhNBjYlPQhHLxjafj+B8j0EiRD/6IzxrUmQC67yPyQGJQvQbQmuKKNSVcAvleByz7ULbfSVZdJmvXkVangPeaeqBgQc2YGi38x+kyzziQg1+Z889UNoIJePrYh+SmlEZdJiMsUdHVBiEHSP6c1yKwjW/w6uS5BLBLNVeBbV5xhjhysqUpxpRn1if9VEvU6ORwe/1nd6tIWqc26v4lE0myUbcfpkrcu+86C3V4fH+c0Zm3AII45vT6NebY1g7Ai2kjX6gYNTfUx6q8hD8J7u8vL07ZE5Jj7MgwYNp03Kz/tEg=
