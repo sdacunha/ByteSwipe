@@ -10,4 +10,4 @@ deploy:
   file: 'lib/ByteSwipe.jar'
   skip_cleanup: true
   on:
-    tags
+    repo: shadwelldacunha/ByteSwipe
