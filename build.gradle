@@ -65,20 +65,10 @@ dependencies {
     compile group: 'org.reflections', name: 'reflections', version: '0.9.10'
     compile group: 'c10n', name: 'c10n-core', version: '1.1'
     compile group: 'com.fifesoft', name: 'rsyntaxtextarea', version: 'r239'
-    shadow group: 'commons-net', name: 'commons-net', version: '3.5'
-    shadow group: 'com.jcraft', name: 'jsch', version: '0.1.53'
-    shadow group: "org.cfg4j", name:"cfg4j-core", version: "4.4.0"
-    shadow group: "org.cfg4j", name:"cfg4j-consul", version: "4.4.0"
-    shadow group: "org.cfg4j", name:"cfg4j-git", version: "4.4.0"
-    shadow group: 'org.reflections', name: 'reflections', version: '0.9.10'
-    shadow group: 'c10n', name: 'c10n-core', version: '1.1'
-    shadow group: 'com.fifesoft', name: 'rsyntaxtextarea', version: 'r239'
 }
 
 artifacts {
     shadowJar;
 }
-
-
 
 build.dependsOn(shadowJar);
