@@ -31,6 +31,7 @@ import com.shadwelldacunha.byteswipe.ui.components.TabComponent;
 import com.shadwelldacunha.byteswipe.ui.screens.Login;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -46,7 +47,6 @@ public class TabbedPane extends JTabbedPane {
     private TabbedPaneLocalization msg;
     public TabbedPane() {
         msg = C10N.get(TabbedPaneLocalization.class);
-
         Pane initialPane = new Pane(new Login());
         addTab(msg.newSession(), initialPane);
         setTabComponentAt(0, new TabComponent(this));

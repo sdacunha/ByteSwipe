@@ -56,6 +56,7 @@ public class Window extends JFrame {
         this.msg =  C10N.get(WindowLocalization.class);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new Dimension(300, 300));
         addWindowListener(windowListener);
         setLayout(new GridBagLayout());
         addComponents();

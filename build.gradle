@@ -41,4 +41,5 @@ dependencies {
     compile group: "org.cfg4j", name:"cfg4j-git", version: "4.4.0"
     compile group: 'org.reflections', name: 'reflections', version: '0.9.10'
     compile group: 'c10n', name: 'c10n-core', version: '1.1'
+    compile group: 'com.fifesoft', name: 'rsyntaxtextarea', version: 'r239'
 }

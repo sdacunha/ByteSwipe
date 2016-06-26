@@ -22,13 +22,7 @@
  * SOFTWARE.
  */
 
-package com.shadwelldacunha.byteswipe.ui.screens;
-
-import com.shadwelldacunha.byteswipe.ui.core.Screen;
-import com.shadwelldacunha.byteswipe.ui.screens.login.LoginPanel;
-
-import javax.swing.*;
-import java.awt.*;
+package com.shadwelldacunha.byteswipe.localization;
 
 /**
  * Enter class description here
@@ -37,9 +31,6 @@ import java.awt.*;
  * @author Shadwell Da Cunha
  * @since 1.0.0
  */
-public class Login extends Screen {
-    public Login() {
-        setLayout(new BorderLayout());
-        add(new LoginPanel(), BorderLayout.CENTER);
-    }
+public interface LoginLocalization {
+
 }
