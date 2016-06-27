@@ -34,4 +34,5 @@ import javax.swing.*;
  * @since 1.0.0
  */
 public class Screen extends JPanel {
+
 }

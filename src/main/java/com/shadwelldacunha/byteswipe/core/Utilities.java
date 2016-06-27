@@ -29,12 +29,16 @@ import c10n.C10NConfigBase;
 import c10n.annotations.DefaultC10NAnnotations;
 import com.shadwelldacunha.byteswipe.ByteSwipe;
 import org.apache.commons.logging.impl.Log4JLogger;
+import org.mozilla.universalchardet.UniversalDetector;
 
 import javax.swing.*;
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.Properties;
 
@@ -63,6 +67,33 @@ public class Utilities {
         }
     }
 
+    public static String readFileAsString(String path, Charset encoding) throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(path));
+        return new String(encoded, encoding);
+    }
+
+    public static String readFileAsString(File file, Charset encoding) throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(file.toURI()));
+        return new String(encoded, encoding);
+    }
+
+    public static String readFileAsString(File file) throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(file.toURI()));
+        return new String(encoded, guessEncoding(encoded));
+    }
+
+    public static String guessEncoding(byte[] bytes) {
+        String DEFAULT_ENCODING = "UTF-8";
+        UniversalDetector detector = new UniversalDetector(null);
+        detector.handleData(bytes, 0, bytes.length);
+        detector.dataEnd();
+        String encoding = detector.getDetectedCharset();
+        detector.reset();
+        if (encoding == null) {
+            encoding = DEFAULT_ENCODING;
+        }
+        return encoding;
+    }
     public static void setLocalization() {
         C10N.configure(new C10NConfigBase(){
             @Override
