@@ -33,7 +33,7 @@ import java.util.Arrays;
 import java.util.Vector;
 
 /**
- * Enter class description here
+ * FTP protocol helper
  * <p>
  *
  * @author Shadwell Da Cunha
