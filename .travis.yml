@@ -7,7 +7,7 @@ before_deploy:
 - ./gradlew build
 - mv build/libs/ByteSwipe.jar build/libs/ByteSwipe-${TRAVIS_COMMIT}.jar
 deploy:
-  pre-release: true
+  prerelease: true
   provider: releases
   skip_cleanup: true
   api_key:
