@@ -36,6 +36,6 @@ import c10n.annotations.En;
  */
 public interface WindowLocalization {
 
-    @En("com.shadwelldacunha.byteswipe.ByteSwipe")
+    @En("ByteSwipe")
     String title();
 }
