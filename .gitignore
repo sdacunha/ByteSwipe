@@ -1,3 +1,6 @@
+# Ignore applicate-generated config file
+/byteswipe.properties
+
 # built application files
 *.apk
 *.ap_
@@ -32,3 +35,4 @@ proguard/
 .gradletasknamecache
 .gradle/
 build/
+src/test/

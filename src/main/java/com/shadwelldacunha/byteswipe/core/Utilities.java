@@ -27,9 +27,17 @@ package com.shadwelldacunha.byteswipe.core;
 import c10n.C10N;
 import c10n.C10NConfigBase;
 import c10n.annotations.DefaultC10NAnnotations;
+import com.shadwelldacunha.byteswipe.ByteSwipe;
+import org.apache.commons.logging.impl.Log4JLogger;
 
 import javax.swing.*;
+import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Locale;
+import java.util.Properties;
+
 
 /**
  * Enter class description here
@@ -39,12 +47,19 @@ import java.util.Locale;
  * @since 1.0.0
  */
 public class Utilities {
+
     public static void setLookAndFeel() {
+        //TODO: Handle exceptions gracefully
         try {
-            // Set System L&F
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            //TODO: Log message
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
         }
     }
 
@@ -57,4 +72,25 @@ public class Utilities {
             }
         });
     }
+
+    public static File getResource(String resource) throws URISyntaxException {
+        ClassLoader classLoader = Utilities.class.getClassLoader();
+        URL fileURL = classLoader.getResource(resource);
+        return new File(fileURL.toURI());
+    }
+
+    public static void copyResource(String resource, String destination) throws IOException {
+        ClassLoader classLoader = Utilities.class.getClassLoader();
+        InputStream resStreamIn = classLoader.getResourceAsStream(resource);
+        File resDestFile = new File(destination);
+        OutputStream resStreamOut = new FileOutputStream(resDestFile);
+        int readBytes;
+        byte[] buffer = new byte[1024];
+        while ((readBytes = resStreamIn.read(buffer)) > 0) {
+            resStreamOut.write(buffer, 0, readBytes);
+        }
+        resStreamIn.close();
+        resStreamOut.close();
+    }
+
 }

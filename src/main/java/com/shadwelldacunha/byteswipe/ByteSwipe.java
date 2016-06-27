@@ -21,6 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+package com.shadwelldacunha.byteswipe;
 
 import com.shadwelldacunha.byteswipe.core.Utilities;
 import com.shadwelldacunha.byteswipe.ui.core.Window;
@@ -37,8 +38,10 @@ import javax.swing.*;
 public class ByteSwipe {
 
     public static void main(String[] args) {
+
         Utilities.setLookAndFeel();
         Utilities.setLocalization();
+
         SwingUtilities.invokeLater(() -> {
             final Window window = new Window();
             window.setVisible(true);
